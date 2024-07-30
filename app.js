@@ -23,11 +23,10 @@ const connection = mysql.createConnection({
     // user: 'root',
     // password: '',
     // database: 'c237_temporiumapp'
-    host: 'db4free.net',
-    user: 'inhalecorn',
+    host: 'mysql-jiawen.alwaysdata.net',
+    user: 'jiawen',
     password: 'Derpypandas4721:>',
-    database: 'temporium'
-
+    database: 'jiawen_cag'
 });
 
 connection.connect((err) => {
