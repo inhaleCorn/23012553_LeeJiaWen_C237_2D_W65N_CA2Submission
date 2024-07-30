@@ -1,0 +1,172 @@
+body {
+    font-family: Verdana, sans-serif;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: #5f2f0e82;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 10px 50px #5f2f0e82;
+    color: #ffffff;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.menu {
+    width: 20%;
+    text-align: center;
+    background-color: #5f2f0e82;
+    padding: 15px;
+    box-shadow: 0 10px 50px #5f2f0e82;
+    color: #ffffff;
+}
+
+.menu a {
+    display: block;
+    color: #ffffff;
+    background-color: #5f2f0e82;
+    padding: 8px;
+    margin-top: 7px;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: #5f2f0eb0;
+}
+
+.userpost1 {
+    width: 60%;
+    padding: 0 20px;
+    overflow-y: auto;
+    color: black;
+}
+
+.about {
+    width: 20%;
+    padding: 15px;
+    text-align: center;
+    background-color: #5f2f0e82;
+    box-shadow: 0 10px 50px #5f2f0e82;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.footer {
+    background-color: #5f2f0e82;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 -10px 50px #5f2f0e82;
+    color: #ffffff;
+}
+
+.horizontal-scroll-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 20vh;
+    transform-origin: 50% 50%;
+    transform: translateZ(0.1px) scale(0.9) translateX(0px) translateY(-3vh);
+    transition: 0.1s;
+}
+
+.img-wrapper:hover {
+    min-height: 10vh;
+}
+
+.small-image {
+    width: 100px;
+    height: auto; 
+}
+
+::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+}
+
+::-webkit-scrollbar-button {
+    width: 1px;
+    height: 1px;
+}
+
+.img-wrapper a {
+    overflow: hidden;
+    display: block;
+    padding: 1vh;
+    background: #ffffff;
+    box-shadow: 0 10px 50px #5f2f0e82;
+}
+
+img {
+    max-width: 13vh;
+    max-height: 50vh;
+    transition: 0.5s;
+    vertical-align: top;
+    filter: saturate(40%) sepia(30%) hue-rotate(5deg);
+}
+
+a:hover img {
+    filter: none;
+}
+
+.icon {
+    cursor: pointer;
+    position: relative;
+}
+
+.icon svg {
+    width: 10px;
+    fill: currentcolor;
+    transition: fill 0.3s ease;
+}
+
+.icon:hover svg {
+    fill: #5f2f11;
+}
+
+.scroll-info p {
+    font-size: 1.5rem;
+    margin: 0;
+    margin-left: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th, td {
+    border: none;
+}
+
+.logo-img {
+    width: 200px;
+    height: auto;
+}

@@ -1,0 +1,34 @@
+<!-- post.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/postStyles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Temporium</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Post details</h1>
+    </header>
+    <div class="container">
+        <% if (post) { %> <!-- Check if post data exists -->
+            <div>
+                <p><b>Username:</b><br> <%= post.username %></p>
+                <% if (post.image) { %>
+                    <p><b>Post Image:</b><br> <img src="<%= post.image %>" alt="Post Image"></p>
+                <% } else { %>
+                    <p><b>Post Image:</b><br> No image available</p>
+                <% } %>
+                <p><b>Post Caption:</b><br> <%= post.caption %></p>
+                <a href="/" class="btn-back">Back</a>
+            </div>
+        <% } else { %>
+            <p>No post found.</p>
+            <a href="/" class="btn-back mt-3">Back</a>
+        <% } %>
+    </div>
+</body>
+</html>

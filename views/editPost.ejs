@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/editPostStyles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Edit Post</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Edit Post</h1>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <% if (post) { %>
+                    <form action="/editPost/<%= post.postId %>" method="POST" enctype="multipart/form-data" class="form-box">
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" name="username" value="<%= post.username %>" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="currentImage">Current Image:</label><br>
+                            <input type="text" name="currentImage" value="<%= post.image %>" disabled><br>
+                            <img src="/images/<%= post.image %>" alt="Current Image">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="image">New Image:</label>
+                            <input type="file" id="image" name="image" accept="image/*">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="caption">Caption:</label>
+                            <input type="text" id="caption" name="caption" value="<%= post.caption %>" required>
+                        </div>
+
+                        <button type="submit">Update Post</button>
+                    </form>
+                <% } else { %>
+                    <p>No post found.</p>
+                <% } %>
+            </div>
+        </div>
+
+        <a href="/" class="btn-back">Back</a>
+    </div>
+</body>
+</html>
