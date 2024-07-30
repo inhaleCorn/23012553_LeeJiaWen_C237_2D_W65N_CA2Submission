@@ -26,7 +26,7 @@ const connection = mysql.createConnection({
     host: 'db4free.net',
     user: 'inhalecorn',
     password: 'Derpypandas4721:>',
-    database: 'Temporium'
+    database: 'temporium'
 
 });
 
