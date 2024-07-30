@@ -18,11 +18,16 @@ const upload = multer({ storage: storage });
 
 // Create MySQL connection
 const connection = mysql.createConnection({
-    host: '127.0.0.1',
-    port: 3307,
-    user: 'root',
-    password: '',
-    database: 'c237_temporiumapp'
+    // host: '127.0.0.1',
+    // port: 3307,
+    // user: 'root',
+    // password: '',
+    // database: 'c237_temporiumapp'
+    host: 'db4free.net',
+    user: 'inhalecorn',
+    password: 'Derpypandas4721:>',
+    database: 'Temporium'
+
 });
 
 connection.connect((err) => {
